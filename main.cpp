@@ -9,6 +9,8 @@ int main() {
     const int screenHeight = 675;  // 450 * 1.5
     InitWindow(screenWidth, screenHeight, "Tower Defense");
 
+    InitAudioDevice(); // Initialize audio device
+
     // Set target FPS
     SetTargetFPS(60); // Set target frames-per-second (FPS)
 
@@ -44,6 +46,7 @@ int main() {
         EndDrawing();
     }
 
+    CloseAudioDevice(); // Close the audio device
     // De-initialize Raylib
     CloseWindow();
 
